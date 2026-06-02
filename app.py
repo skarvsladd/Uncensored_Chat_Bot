@@ -9,7 +9,7 @@ response = openai.ChatCompletion.create(
         {'role': 'system', 'content': 'you are a helpful assistant'},
         {'role': 'user', 'content': 'What is the capital of France?'}
     ],
-    temperature=0.5,
+    temperature=0.3,
     max_tokens=1024
 )
 

@@ -1,6 +1,7 @@
+import os
 import openai
 
-openai.api_key="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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 response = openai.ChatCompletion.create(
@@ -15,5 +16,4 @@ response = openai.ChatCompletion.create(
 
 # print(response)
 print(response.choices[0].message.content)
-
 

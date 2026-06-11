@@ -1,11 +1,9 @@
+import os
 import openai
 
-# openai.api_key="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"
-
-
-openai.api_type = "open_ai"
-openai.api_base = "http://localhost:1234/v1"
-openai.api_key = "Whatever"
+openai.api_type = os.getenv("OPENAI_API_TYPE", "open_ai")
+openai.api_base = os.getenv("OPENAI_API_BASE", "http://localhost:1234/v1")
+openai.api_key = os.getenv("OPENAI_API_KEY", "default")
 
 
 messages = [{'role': 'system', 'content': 'you are a helpful assistant'}]
@@ -29,7 +27,6 @@ while True:
     
     
     messages.append({'role': 'assistant', 'content': response.choices[0].message.content})
-
 
 
 

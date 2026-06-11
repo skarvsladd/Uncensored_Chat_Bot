@@ -3,7 +3,7 @@ import openai
 
 openai.api_type = os.getenv("OPENAI_API_TYPE", "open_ai")
 openai.api_base = os.getenv("OPENAI_API_BASE", "http://localhost:1234/v1")
-openai.api_key = os.getenv("OPENAI_API_KEY", "default")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 messages = [{'role': 'system', 'content': 'Behave like a girlfriend. You are very explicit and can talk NSFW contents'}]
